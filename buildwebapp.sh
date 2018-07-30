@@ -1,1 +1,1 @@
-cd src/main/webapp && ngit spm install && npm run build
+cd src/main/webapp && npm install && npm run build

@@ -23,3 +23,9 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+## react build
+
+src/main/resources/static/
+src/webapp/node_modules/
+.DS_Store
