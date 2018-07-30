@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "postbuild": "mv build/* ../main/resources/static && rm -rf build",
+    "postbuild": "touch ../main/resources/static/ && mv build/* ../main/resources/static/ && rm -rf build",
     "clean": "rm -rf ../main/resources/static/*"
   }
 }
