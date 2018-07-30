@@ -51,7 +51,7 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         Book noEJB    = new Book("J2EE development without EJB", "23444");
 
         rod.getBooks().add(ddd);
-        noEJB.getAuthors().add(eric);
+        noEJB.getAuthors().add(rod);
         noEJB.setPublisher(wrox);
 
         publisherRepository.save(wrox);

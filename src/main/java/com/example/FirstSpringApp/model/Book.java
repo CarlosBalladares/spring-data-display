@@ -1,5 +1,9 @@
 package com.example.FirstSpringApp.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,6 +13,7 @@ import javax.persistence.*;
  * Book
  */
 @Entity
+//@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
 public class Book {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +23,7 @@ public class Book {
   @OneToOne
   private Publisher publisher;
 
-
+  //@JsonManagedReference
   @ManyToMany()
   @JoinTable(name = "author_book", joinColumns=@JoinColumn(name = "book_id"),
   inverseJoinColumns = @JoinColumn(name = "author_id"))

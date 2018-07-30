@@ -1,5 +1,12 @@
 package com.example.FirstSpringApp.model;
 
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,14 +19,18 @@ import javax.persistence.ManyToMany;
 /**
  * Author
  */
+
 @Entity
-public class Author {
+//@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+
+public class Author  implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;
 
+  //@JsonManagedReference
   @ManyToMany(mappedBy = "authors")
   private Set<Book> books = new HashSet<>();
 
