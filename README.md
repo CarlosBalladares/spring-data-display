@@ -1,8 +1,11 @@
 # spring-data-display
 
-Simple spring project. Created with start.spring.io
+Simple spring project.
 
-It adds data to h2 database using JPA and displays it with thymeleaf templates.
+This CRUD app has a RESTFUL API and a simple react web client.
+
+Backend written in Java with Spring and front-end Written in Javascript with react
+
 
 # to run
 
