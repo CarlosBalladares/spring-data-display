@@ -41,12 +41,11 @@ class Books extends React.Component{
   }
 
   componentDidMount() {
-    const books ={}
+    
     fetch("/api/books")
       .then(res => res.json())
       .then(
         (result) => {
-          console.log(result);
           this.setState({
             isLoaded: true,
             books: result._embedded.books
